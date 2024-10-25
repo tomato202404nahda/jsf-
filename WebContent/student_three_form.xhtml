@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      
+      >
+	
+	<h:head>
+		<title>Student Two Registration</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First Name: <h:inputText id="firstName" value="#{studentThree.firstName}" />
+			<br/> <br/>
+			Last Name: <h:inputText id="lastName" value="#{studentThree.lastName}" />
+			
+			<br/><br/>
+			Favorite Programming Language:
+			<h:selectOneRadio value="#{studentThree.programmingLanguage}" >
+				<!-- <f:selectItem itemValue="PHP" itemLabel="PHP" />
+				<f:selectItem itemValue="Rust" itemLabel="Rust" />
+				<f:selectItem itemValue="Zig" itemLabel="Zig" />
+				<f:selectItem itemValue="Java" itemLabel="Java" />
+				<f:selectItem itemValue="Nim" itemLabel="Nim" /> -->
+				<f:selectItems value="#{studentThree.programmingLanguageOptions}" />
+			</h:selectOneRadio>
+			<br/><br/>
+			<h:commandButton value="Submit" action="student_three_response"  />
+		</h:form>
+	</h:body>
+
+
+</html>
